@@ -8,6 +8,12 @@
 public class VariablesExamples {
     public static void main(String[] args) {
 
-        
+        int age = 30;
+        double height = 1.75;
+        char grade = '7';
+        boolean isJavaFun = true;
+        String name = "Wayne";
+
+
     }
 }
