@@ -8,6 +8,9 @@ public class DoWhileLoop {
         do{
             System.out.println("Do you want to continue? (yes/no):");
             answer = input.nextLine();
-        }
+        } while (!answer.equalsIgnoreCase("no"));
+
+        System.out.println("You exited the loop.");
+        input.close();
     }
 }
