@@ -8,5 +8,8 @@ public class Main {
         //Set Values
         p1.name = "Wayne";
         p1.age = 25;
+
+        // Call the method
+        p1.sayHello();
     }
 }
