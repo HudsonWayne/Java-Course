@@ -19,6 +19,9 @@ public class Main {
         myCar.color = "Red";
         myCar.model = "Toyota Corolla";
         myCar.year = 2022;
+
+        System.out.println("My car is a " + myCar.year + " " + myCar.model + " in " + myCar.color);
+        myCar.startEngine();
     }
 
 
