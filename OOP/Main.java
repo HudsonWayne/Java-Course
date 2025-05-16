@@ -11,5 +11,18 @@ public class Main {
 
         // Call the method
         p1.sayHello();
+
+
+
+        Car myCar = new Car();
+
+        myCar.color = "Red";
+        myCar.model = "Toyota Corolla";
+        myCar.year = 2022;
     }
+
+
+
+
+
 }
