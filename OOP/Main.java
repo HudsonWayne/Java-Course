@@ -3,7 +3,8 @@ package OOP;
 public class Main {
     public static void main(String[] args) {
         // Create a person object
-        Person p1 = new Person();
+        Person p1 = new Person("Wayne", 25);
+        Person p2 = new Person("Alice", 30);
 
         //Set Values
         p1.name = "Wayne";
