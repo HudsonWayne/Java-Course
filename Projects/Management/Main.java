@@ -1,13 +1,13 @@
-package Projects.Management;
 import java.util.Scanner;
 
 public class Main {
-    Scanner scanner = new Scanner(System.in);
-    Student[] students = new Student[100];
-    int count = 0;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Student[] students = new Student[100];  // Can store up to 100 students
+        int count = 0;
 
-    while(true){
-        System.out.println("\n--- Student Management System ---");
+        while (true) {
+            System.out.println("\n--- Student Management System ---");
             System.out.println("1. Add Student");
             System.out.println("2. View All Students");
             System.out.println("3. Search by Name");
@@ -16,8 +16,8 @@ public class Main {
             int option = scanner.nextInt();
             scanner.nextLine(); // clear buffer
 
-            if (option == 1){
-                System.out.println("Enter name:");
+            if (option == 1) {
+                System.out.print("Enter name: ");
                 String name = scanner.nextLine();
 
                 System.out.print("Enter age: ");
@@ -27,11 +27,13 @@ public class Main {
                 students[count] = new Student(name, age);
                 count++;
                 System.out.println("Student added!");
-            }else if (option == 2) {
+
+            } else if (option == 2) {
                 System.out.println("\nAll Students:");
                 for (int i = 0; i < count; i++) {
                     students[i].displayInfo();
                 }
+
             } else if (option == 3) {
                 System.out.print("Enter name to search: ");
                 String searchName = scanner.nextLine();
@@ -45,7 +47,20 @@ public class Main {
                     }
                 }
 
+                if (!found) {
+                    System.out.println("Student not found.");
+                }
+
+            } else if (option == 4) {
+                System.out.println("Exiting...");
+                break;
+
+            } else {
+                System.out.println("Invalid option.");
+            }
+        }
+
+        scanner.close();
     }
 }
-
 
