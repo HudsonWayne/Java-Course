@@ -37,6 +37,14 @@ public class Main {
                 String searchName = scanner.nextLine();
                 boolean found = false;
 
+                for (int i = 0; i < count; i++) {
+                    if (students[i].getName().equalsIgnoreCase(searchName)) {
+                        students[i].displayInfo();
+                        found = true;
+                        break;
+                    }
+                }
+
     }
 }
 
