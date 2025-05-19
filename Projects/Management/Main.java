@@ -23,6 +23,10 @@ public class Main {
                 System.out.print("Enter age: ");
                 int age = scanner.nextInt();
                 scanner.nextLine(); // clear buffer
+
+                students[count] = new Student(name, age);
+                count++;
+                System.out.println("Student added!");
             }
 
     }
