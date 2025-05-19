@@ -27,7 +27,15 @@ public class Main {
                 students[count] = new Student(name, age);
                 count++;
                 System.out.println("Student added!");
-            }
+            }else if (option == 2) {
+                System.out.println("\nAll Students:");
+                for (int i = 0; i < count; i++) {
+                    students[i].displayInfo();
+                }
+            } else if (option == 3) {
+                System.out.print("Enter name to search: ");
+                String searchName = scanner.nextLine();
+                boolean found = false;
 
     }
 }
