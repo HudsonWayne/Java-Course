@@ -8,6 +8,9 @@ public class Main {
         students[0] = new Student("John", 20);
         students[1] = new Student("Alice", 22);
         students[2] = new Student("Bob", 21);
+
+        for (int i = 0; i < students.length; i++) {
+            students[i].introduce();
     }
 
 
