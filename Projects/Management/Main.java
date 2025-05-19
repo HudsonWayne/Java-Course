@@ -1,4 +1,4 @@
-package Projects.Management Management System;
+package Projects.Management;
 
 public class Main {
     
