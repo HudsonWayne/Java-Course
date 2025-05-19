@@ -12,9 +12,5 @@ public class Main {
         for (int i = 0; i < students.length; i++) {
             students[i].introduce();
     }
-
-
-
-
-
+    }
 }
