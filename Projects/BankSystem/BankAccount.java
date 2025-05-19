@@ -10,7 +10,16 @@ public BankAccount(String owenerName){
 }    
  //Deposit method
 
-public void Deposit(double amount){}
+public void Deposit(double amount){
+    if (amount > 0) {
+        balance += amount;
+        System.out.println("Deposited $" + amount + " into your account.");
+    }else{
+        System.out.println("Invalid deposit amount. Please enter a positive number.");
+    }
+}
+//Withdrawal method
+public void Withdraw(double amount){}
 
 
 }
