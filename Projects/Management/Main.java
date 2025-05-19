@@ -16,6 +16,15 @@ public class Main {
             int option = scanner.nextInt();
             scanner.nextLine(); // clear buffer
 
+            if (option == 1){
+                System.out.println("Enter name:");
+                String name = scanner.nextLine();
+
+                System.out.print("Enter age: ");
+                int age = scanner.nextInt();
+                scanner.nextLine(); // clear buffer
+            }
+
     }
 }
 
