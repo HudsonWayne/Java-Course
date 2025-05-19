@@ -4,29 +4,39 @@ public class BankAccount {
     private String ownerName;
     private double balance;
 
-public BankAccount(String owenerName){
-    this.ownerName = ownerName;
+    // Constructor
+    public BankAccount(String ownerName) {
+        this.ownerName = ownerName;
         this.balance = 0.0;  // Start with zero balance
-}    
- //Deposit method
-
-public void Deposit(double amount){
-    if (amount > 0) {
-        balance += amount;
-        System.out.println("Deposited $" + amount + " into your account.");
-    }else{
-        System.out.println("Invalid deposit amount. Please enter a positive number.");
     }
-}
-//Withdrawal method
-public void Withdraw(double amount){
-    if (amount > 0; && amount <= balance){
-        balance -= amount;
-        System.out.println("Withdrawn $" + amount + " from your account.");
-    }else{
-        System.out.println("Invalid withdrawal amount. Please enter a positive number.");
+
+    // Deposit method
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println("Deposited $" + amount);
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
     }
-}
 
+    // Withdraw method
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println("Withdrew $" + amount);
+        } else {
+            System.out.println("Insufficient balance or invalid amount.");
+        }
+    }
 
+    // Check balance
+    public void checkBalance() {
+        System.out.println("Current balance: $" + balance);
+    }
+
+    // Get account owner
+    public String getOwnerName() {
+        return ownerName;
+    }
 }
