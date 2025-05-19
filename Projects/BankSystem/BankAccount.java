@@ -19,7 +19,14 @@ public void Deposit(double amount){
     }
 }
 //Withdrawal method
-public void Withdraw(double amount){}
+public void Withdraw(double amount){
+    if (amount > 0; && amount <= balance){
+        balance -= amount;
+        System.out.println("Withdrawn $" + amount + " from your account.");
+    }else{
+        System.out.println("Invalid withdrawal amount. Please enter a positive number.");
+    }
+}
 
 
 }
