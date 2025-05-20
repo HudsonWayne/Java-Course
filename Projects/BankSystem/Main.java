@@ -1,6 +1,8 @@
 package Projects.BankSystem;
 import java.util.Scanner;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -16,22 +18,39 @@ public class Main {
             System.out.print("Choose an option: ");
 
             int option = scanner.nextInt();
-            scanner.nextInt();
+            scanner.nextLine(); // clear buffer
 
-            if(option==1){
+            if (option == 1) {
                 System.out.print("Enter your name: ");
                 String name = scanner.nextLine();
                 account = new BankAccount(name);
                 System.out.println("Account created for " + account.getOwnerName());
-            }else if(account == null){
+
+            } else if (account == null) {
                 System.out.println("Please create an account first.");
-            }else if(option == 2){
-                System.out.println("Enter amount to deposit: ");
+
+            } else if (option == 2) {
+                System.out.print("Enter amount to deposit: ");
                 double amount = scanner.nextDouble();
                 account.deposit(amount);
+
+            } else if (option == 3) {
+                System.out.print("Enter amount to withdraw: ");
+                double amount = scanner.nextDouble();
+                account.withdraw(amount);
+
+            } else if (option == 4) {
+                account.checkBalance();
+
+            } else if (option == 5) {
+                System.out.println("Thank you for using the bank system. Goodbye!");
+                break;
+
+            } else {
+                System.out.println("Invalid option. Try again.");
             }
         }
-    }
 
-    
+        scanner.close();
+    }
 }
